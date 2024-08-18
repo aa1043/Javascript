@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    body{
+      background-color: #212121;
+      color: aliceblue;
+    }
+  </style>
+  <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+  </div>
+</body>
+<script>
+  const parent=document.querySelector('.parent')
+  console.log(parent);
+  //Print in the console full div parent
+  console.log(parent.children);
+  //Print in the console a HTML Collection//HTMLCollection(4) [div.day, div.day, div.day, div.day]
+  console.log(parent.children[1].innerHTML);
+  //Tuesday
+//   for(let i=0;i<parent.children.length;i++)
+// {
+//   console.log(parent.children[i].innerHTML);
+// }
+/*Monday
+ Tuesday
+ Wednesday
+ Thursday*/
+ parent.children[1].style.color="Orange"
+ //            CHILD ELEMENT
+ console.log(parent.firstElementChild.innerHTML);//Monday
+ console.log(parent.lastElementChild.innerHTML);//Thursday
+ const day=document.querySelector('.day')
+ console.log(day);
+ //            PARENT ELEMENT
+ console.log(day.parentElement.innerHTML);
+ //           SIBLING ELEMENT
+ console.log(day.nextElementSibling.innerHTML);
+ // Tuesday
+ //           TO PRINT NODES
+ console.log((parent.childNodes));
+ 
+</script>
+</html>
